@@ -19,5 +19,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Install PM2
+      run: npm install -g pm2
+  
     - name: Start application
-      run: pm2 start index.js --name "Jerry-MD"
+      run: pm2 start index.js --name "Jerry-MD" && pm2 logs
